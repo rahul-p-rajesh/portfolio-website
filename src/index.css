@@ -1,10 +1,5 @@
 @import "tailwindcss";
 
-/* html {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-} */
-
 body {
   background: linear-gradient(135deg, #0a0f1a, #0c2e33, #064d46);
   color: #ece2d0;
@@ -26,3 +21,33 @@ a {
   --color-dark-green: #002b2b;
   --color-dark-green-hover: #014d4d;
 }
+
+/* @media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+} */

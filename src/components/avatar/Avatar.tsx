@@ -1,6 +1,5 @@
 import Spline from "@splinetool/react-spline";
 import { type CSSProperties } from "react";
-import "./avatar.css";
 
 export default function Avatar() {
   const splineStyling: CSSProperties = {
@@ -17,6 +16,14 @@ export default function Avatar() {
       <Spline
         style={splineStyling}
         scene="https://prod.spline.design/7Lxl2RGuyGmWBVo0/scene.splinecode"
+      />
+      {/* Gradient overlay at the bottom */}
+      <div
+        className="absolute bottom-0 left-0 w-full h-32 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to bottom, transparent, var(--color-dark-green))",
+        }}
       />
     </div>
   );
