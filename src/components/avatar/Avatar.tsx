@@ -1,33 +1,23 @@
 import Spline from "@splinetool/react-spline";
-import { useEffect, useState, type CSSProperties } from "react";
+import { type CSSProperties } from "react";
 import "./avatar.css";
 
 export default function Avatar() {
-  // const [sceneStyle, setSceneStyle] = useState<CSSProperties>({
-  //   width: "100px",
-  //   height: "100vh",
-  // });
-
-  // useEffect(() => {
-  //   let resizeTimeout: number | undefined;
-  //   const handleResize = () => {
-  //     clearTimeout(resizeTimeout);
-  //     resizeTimeout = window.setTimeout(() => {
-  //       console.log("window.innerWidth ", window.innerWidth);
-  //       console.log("window.innerHeight ", window.innerHeight);
-  //       setSceneStyle((prevStyle) => ({
-  //         ...prevStyle,
-  //         width: `${window.innerWidth}px`,
-  //       }));
-  //     }, 100);
-  //   };
-  //   window.addEventListener("resize", handleResize);
-  //   return () => window.removeEventListener("resize", handleResize);
-  // }, []);
+  const splineStyling: CSSProperties = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100vw",
+    height: "100vh",
+  };
 
   return (
-    <div className="wrapper">
-      <Spline scene="https://prod.spline.design/i7LBp9hXtu6naQQL/scene.splinecode" />
+    <div className="background-section  absolute inset-0  w-screen h-screen z-0 flex justify-center items-center">
+      {/* TODO: Add lazy loading to spline component and also option to set zoom size based on screen dimension  */}
+      <Spline
+        style={splineStyling}
+        scene="https://prod.spline.design/7Lxl2RGuyGmWBVo0/scene.splinecode"
+      />
     </div>
   );
 }

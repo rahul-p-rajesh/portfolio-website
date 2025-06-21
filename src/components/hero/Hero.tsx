@@ -2,23 +2,13 @@ import React, { CSSProperties, useEffect, useRef } from "react";
 import Spline from "@splinetool/react-spline";
 import type { Application, SPEObject } from "@splinetool/runtime";
 import { motion } from "framer-motion";
+import Avatar from "../avatar/Avatar";
 
 export default function Hero() {
-  const splineStyling: CSSProperties = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "100%",
-    height: "100%",
-  };
   return (
-    <>
-      <div className="background-section  absolute inset-0  w-full h-full z-0 flex justify-center items-center">
-        {/* TODO: Add lazy loading to spline component and also option to set zoom size based on screen dimension  */}
-        <Spline
-          style={splineStyling}
-          scene="https://prod.spline.design/7Lxl2RGuyGmWBVo0/scene.splinecode"
-        />
+    <div className="w-screen h-screen ">
+      <div className="background-section  absolute inset-0  w-full h-full flex justify-center items-center ">
+        <Avatar></Avatar>
       </div>
       <section className="flex h-full justify-left items-center px-6  flex-wrap-reverse">
         <div className="text-section z-1 h-full sm:h-fit  w-full md:w-1/2 lg:pl-1 flex justify-center items-center">
@@ -44,14 +34,34 @@ export default function Hero() {
               stack developer.
             </p>
 
-            <button className="bg-dark-green hover:bg-dark-green-hover text-white font-semibold px-6 py-3 rounded-md transition duration-300">
-              Connect with me
-            </button>
-            {/* TODO: Add scroll svg section here */}
+            <div className="social-links flex justify-start items-center">
+              {/* TODO: Add github and linkedin links to them */}
+              <button className="bg-dark-green hover:bg-dark-green-hover text-white font-semibold w-12 h-12 rounded-md transition duration-300 flex items-center justify-center mr-3">
+                <img
+                  src="/linkedin.png"
+                  alt="Linkedin"
+                  className="w-6 h-6 invert"
+                />
+              </button>
+              <button className="bg-dark-green hover:bg-dark-green-hover text-white font-semibold w-12 h-12 rounded-md transition duration-300 flex items-center justify-center mr-3">
+                <img
+                  src="/twitter-logo.png"
+                  alt="Twitter"
+                  className="w-6 h-6 invert"
+                />
+              </button>
+              {/* Twitter */}
+              <button className="bg-dark-green hover:bg-dark-green-hover text-white font-semibold w-12 h-12 rounded-md transition duration-300 flex items-center justify-center">
+                <img
+                  src="/github-logo.png"
+                  alt="GitHub"
+                  className="w-6 h-6 invert"
+                />
+              </button>
+            </div>
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
-//border-2 border-amber-200

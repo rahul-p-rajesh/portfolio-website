@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
-html {
+/* html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-}
+} */
 
 body {
   background: linear-gradient(135deg, #0a0f1a, #0c2e33, #064d46);
@@ -22,53 +22,7 @@ a {
   color: #ece2d0;
 }
 
-.parent-container {
-  max-width: 1536px;
-  padding-left: 16px;
-  padding-right: 16px;
-  margin-left: auto;
-  margin-right: auto;
-  max-height: fit-content;
-  min-height: 100vh;
-}
-
-section {
-  min-height: 100vh;
-  max-height: fit-content;
-  scroll-snap-align: center;
-}
-
 @theme {
   --color-dark-green: #002b2b;
   --color-dark-green-hover: #014d4d;
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
 }
