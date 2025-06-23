@@ -37,6 +37,7 @@ const App = () => {
       <section className="frame-container min-h-fit  w-screen">
         <Tech />
       </section>
+      {/* TODO: Add a project section */}
     </div>
   );
 };
