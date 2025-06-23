@@ -14,10 +14,7 @@ export default function Avatar() {
   return (
     <div className="background-section  absolute inset-0  w-full h-screen z-0 flex justify-center items-center">
       <Suspense fallback={<div />}>
-        <Spline
-          style={splineStyling}
-          scene="https://prod.spline.design/7Lxl2RGuyGmWBVo0/scene.splinecode"
-        />
+        <Spline style={splineStyling} scene="/spline/character_cube.spline" />
       </Suspense>
       {/* Gradient overlay at the bottom */}
       <div
