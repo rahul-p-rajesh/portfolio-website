@@ -5,6 +5,7 @@ import Experience from "./components/experience/Experience";
 import Hero from "./components/hero/Hero";
 import Projects from "./components/projects/Projects";
 import Lenis from "lenis";
+import Tech from "./components/tech/Tech";
 
 const App = () => {
   useEffect(() => {
@@ -25,14 +26,18 @@ const App = () => {
   }, []);
 
   return (
-    <div className=" max-h-screen max-w-screen px-4 mx-auto">
+    <div className="bg-[--color-dark-green] text-white px-4 mx-auto">
       {/* Children */}
       <section className="frame-container h-screen w-screen">
         <Hero />
       </section>
-      <section className="frame-container min-h-fit h-screen w-screen">
+      <section className="frame-container min-h-fit w-screen">
         <Experience />
       </section>
+      <section className="frame-container min-h-fit  w-screen">
+        <Tech />
+      </section>
+      {/* TODO: Add a project section */}
     </div>
   );
 };
