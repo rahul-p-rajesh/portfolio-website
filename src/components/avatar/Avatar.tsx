@@ -11,7 +11,7 @@ export default function Avatar() {
   };
 
   return (
-    <div className="background-section  absolute inset-0  w-screen h-screen z-0 flex justify-center items-center">
+    <div className="background-section  absolute inset-0  w-full h-screen z-0 flex justify-center items-center">
       {/* TODO: Add lazy loading to spline component and also option to set zoom size based on screen dimension  */}
       <Spline
         style={splineStyling}
