@@ -35,23 +35,38 @@ export default function Hero() {
             </p>
 
             <div className="social-links flex justify-start items-center">
-              {/* TODO: Add github and linkedin links to them */}
-              <button className="bg-dark-green hover:bg-dark-green-hover text-white font-semibold w-12 h-12 rounded-md transition duration-300 flex items-center justify-center mr-3">
+              {/*Linkedin */}
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/in/rahul-p-rajesh-01b310197/",
+                    "_blank"
+                  )
+                }
+                className="bg-dark-green hover:bg-dark-green-hover text-white font-semibold w-12 h-12 rounded-md transition duration-300 flex items-center justify-center mr-3 cursor-pointer"
+              >
                 <img
                   src="/linkedin.png"
                   alt="Linkedin"
                   className="w-6 h-6 invert"
                 />
               </button>
-              <button className="bg-dark-green hover:bg-dark-green-hover text-white font-semibold w-12 h-12 rounded-md transition duration-300 flex items-center justify-center mr-3">
+              {/* Twitter */}
+              {/* TODO: Add twitter */}
+              {/* <button className="bg-dark-green hover:bg-dark-green-hover text-white font-semibold w-12 h-12 rounded-md transition duration-300 flex items-center justify-center mr-3 cursor-pointer">
                 <img
                   src="/twitter-logo.png"
                   alt="Twitter"
                   className="w-6 h-6 invert"
                 />
-              </button>
-              {/* Twitter */}
-              <button className="bg-dark-green hover:bg-dark-green-hover text-white font-semibold w-12 h-12 rounded-md transition duration-300 flex items-center justify-center">
+              </button> */}
+              {/* Github */}
+              <button
+                onClick={() =>
+                  window.open("https://github.com/rahul-p-rajesh", "_blank")
+                }
+                className="bg-dark-green hover:bg-dark-green-hover text-white font-semibold w-12 h-12 rounded-md transition duration-300 flex items-center justify-center cursor-pointer"
+              >
                 <img
                   src="/github-logo.png"
                   alt="GitHub"
