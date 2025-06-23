@@ -1,5 +1,6 @@
-import Spline from "@splinetool/react-spline";
-import { type CSSProperties } from "react";
+import { type CSSProperties, lazy, Suspense } from "react";
+
+const Spline = lazy(() => import("@splinetool/react-spline"));
 
 export default function Avatar() {
   const splineStyling: CSSProperties = {
@@ -12,11 +13,12 @@ export default function Avatar() {
 
   return (
     <div className="background-section  absolute inset-0  w-full h-screen z-0 flex justify-center items-center">
-      {/* TODO: Add lazy loading to spline component and also option to set zoom size based on screen dimension  */}
-      <Spline
-        style={splineStyling}
-        scene="https://prod.spline.design/7Lxl2RGuyGmWBVo0/scene.splinecode"
-      />
+      <Suspense fallback={<div />}>
+        <Spline
+          style={splineStyling}
+          scene="https://prod.spline.design/7Lxl2RGuyGmWBVo0/scene.splinecode"
+        />
+      </Suspense>
       {/* Gradient overlay at the bottom */}
       <div
         className="absolute bottom-0 left-0 w-full h-32 pointer-events-none"
