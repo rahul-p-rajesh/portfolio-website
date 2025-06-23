@@ -14,7 +14,10 @@ export default function Avatar() {
   return (
     <div className="background-section  absolute inset-0  w-full h-screen z-0 flex justify-center items-center">
       <Suspense fallback={<div />}>
-        <Spline style={splineStyling} scene="/spline/character_cube.spline" />
+        <Spline
+          style={splineStyling}
+          scene="/spline/character_cube_camera_hover.spline"
+        />
       </Suspense>
       {/* Gradient overlay at the bottom */}
       <div
